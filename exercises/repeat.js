@@ -8,6 +8,17 @@
  */
 
 // Your code:
+function repeat(s,n){
+    if(typeof s ==='string' && Number.isInteger(n) && n>=0){
+        let s2='';
+        for(let i=1; i<=n; i++){
+            s2+=s;
+        }
+        return s2;
+    }else{
+        return null;
+    }
+}
 
 //* Begin of tests
 const assert = require('assert');

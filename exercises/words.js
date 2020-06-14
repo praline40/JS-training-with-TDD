@@ -7,9 +7,13 @@
  */
 
 // Your code:
+function words(s){
+    return s.split(" ");
+}
 
 //* Begin of tests
 const assert = require('assert');
+const { strict } = require('assert');
 
 assert.strictEqual(typeof words, 'function');
 assert.strictEqual(words.length, 1);

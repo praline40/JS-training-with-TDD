@@ -11,9 +11,39 @@
  */
 
 // Your code:
+function cutFirst(s){
+    let l=s.length;
+    if (l>=2){
+        s = s.substring(2,l);
+    }         
+    return s;
+}
+
+function cutLast(s){
+    let l=s.length;
+    if (l>=2){
+        s = s.substring(0,l-2);
+    } 
+    return s;
+}
+
+function cutFirstLast(s){
+    let l=s.length;
+    if (l>=4){
+        s = s.substring(2,l-2);
+    } 
+    return s;
+}
 
 //* Begin of tests
 const assert = require('assert');
+assert.strictEqual(cutFirst.length, 1);
 
-assert.fail('You must write your own tests');
+assert.deepStrictEqual(cutFirst('Abc'), 'c');
+assert.deepStrictEqual(cutFirst('bc'), '');
+assert.deepStrictEqual(cutLast('aBc'), 'a');
+assert.deepStrictEqual(cutLast('Bc'), '');
+assert.deepStrictEqual(cutFirstLast('ABCD'), '');
+assert.deepStrictEqual(cutFirstLast('ABCDE'), 'C');
+ 
 // End of tests */

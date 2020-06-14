@@ -8,6 +8,27 @@
  */
 
 // Your code:
+function capitalize(s){
+    let ss='';
+    let c=s.charCodeAt(0);
+    if(c > 96 && c < 123){
+        ss+=String.fromCharCode(c - 32);
+    }else{
+        ss+=String.fromCharCode(c);
+    }
+    for (let i=1; i<s.length; i++){
+        c=s.charCodeAt(i);
+        if(c > 64 && c < 91){
+            ss+=String.fromCharCode(c + 32);
+        }else{
+            ss+=String.fromCharCode(c);
+        }
+    }
+    
+    return ss;
+    //return '*'+s.toLowerCase()+'*';
+}
+
 
 //* Begin of tests
 const assert = require('assert');
