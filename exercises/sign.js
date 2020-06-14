@@ -11,6 +11,20 @@
  */
 
 // Your code:
+function sign (num){
+    if (typeof num === 'number'){
+         if (num>0){
+             return 1;
+         }else if(num===0){
+             return 0;
+         }else{
+             return -1;
+         }
+    }else{
+        console.log('Only numbers accepted');
+        return null;
+    }
+}
 
 //* Begin of tests
 const assert = require('assert');

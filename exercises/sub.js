@@ -7,6 +7,14 @@
  */
 
 // Your code:
+function sub (num1, num2){
+    if (typeof num1 === 'number' && typeof num2 === 'number'){
+        return num1-num2;
+    }else{
+        console.log('Only numbers accepted');
+        return null;
+    }
+}
 
 //* Begin of tests
 const assert = require('assert');

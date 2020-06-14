@@ -7,6 +7,13 @@
  */
 
 // Your code:
+function total (numbers){
+    let n=0;
+    numbers.forEach(number => {
+        n+=number; 
+    });
+    return n;
+}
 
 //* Begin of tests
 const assert = require('assert');

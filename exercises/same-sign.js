@@ -8,9 +8,23 @@
  */
 
 // Your code:
+function sameSign (num1, num2){
+    if (typeof num1 === 'number' && typeof num2 === 'number'){
+        if(num1<0 && num2<0 || num1>0 && num2>0 || num1===0 && num2===0){
+            return true;
+        }else{
+            return false;
+        }
+    }else{
+        console.log('Only numbers accepted');
+        return null;
+    }
+}
 
 //* Begin of tests
 const assert = require('assert');
+const { sign } = require('crypto');
+const { REPL_MODE_STRICT } = require('repl');
 
 assert.strictEqual(typeof sameSign, 'function');
 assert.strictEqual(sameSign.length, 2);
